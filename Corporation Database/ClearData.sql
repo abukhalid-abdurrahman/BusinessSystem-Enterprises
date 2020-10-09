@@ -1,0 +1,14 @@
+﻿delete from CashData
+delete from ConculationData
+delete from ExpenseFirm
+delete from ExpenseFood
+delete from ExpenseFuel
+delete from ExpenseResults
+delete from ExpenseWorker
+delete from ExpenseWorkers
+delete from RawMaterials
+delete from RawMaterialsResidue
+delete from RemovedRawMaterials
+delete from ResidueShopMaterials
+delete from SaledShopMaterials
+delete from ShopMaterials

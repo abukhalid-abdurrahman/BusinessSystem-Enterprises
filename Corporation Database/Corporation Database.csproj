@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE454AF9-9643-42A7-B2BE-5BE7A9EA7FF6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Corporation_Database</RootNamespace>
+    <AssemblyName>Corporation Database</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>опубликовать\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>vellaico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\Microsoft\Office Tools\Microsoft.Office.Interop.15\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasarAndProdovecForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasarAndProdovecForm.Designer.cs">
+      <DependentUpon>BasarAndProdovecForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block.Designer.cs">
+      <DependentUpon>Block.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashFormViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashFormViewer.Designer.cs">
+      <DependentUpon>CashFormViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompressedArchive.cs" />
+    <Compile Include="GeneralDataList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralDataList.Designer.cs">
+      <DependentUpon>GeneralDataList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOAssociation.cs" />
+    <Compile Include="ShopMaterialsNamesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopMaterialsNamesList.Designer.cs">
+      <DependentUpon>ShopMaterialsNamesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CounterpartyAccountList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CounterpartyAccountList.Designer.cs">
+      <DependentUpon>CounterpartyAccountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseRecordsConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseRecordsConfiguration.Designer.cs">
+      <DependentUpon>DatabaseRecordsConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CounterpartyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CounterpartyAccount.Designer.cs">
+      <DependentUpon>CounterpartyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataPicker.Designer.cs">
+      <DependentUpon>DataPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MineDataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MineDataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MineDataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MineDataDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MineDataDataSet2.cs">
+      <DependentUpon>MineDataDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MineDataDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MineDataDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MineDataDataSet3.cs">
+      <DependentUpon>MineDataDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MineDataDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MineDataDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MineDataDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MineDataDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MineDataDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MineDataDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductConculationStep1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductConculationStep1.Designer.cs">
+      <DependentUpon>ProductConculationStep1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphGenerator.Designer.cs">
+      <DependentUpon>GraphGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HumanEditorStep2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HumanEditorStep2.Designer.cs">
+      <DependentUpon>HumanEditorStep2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HumanEditorStep1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HumanEditorStep1.Designer.cs">
+      <DependentUpon>HumanEditorStep1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductConculationStep2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductConculationStep2.Designer.cs">
+      <DependentUpon>ProductConculationStep2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductListAdder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductListAdder.Designer.cs">
+      <DependentUpon>ProductListAdder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterials.Designer.cs">
+      <DependentUpon>RawMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General.cs" />
+    <Compile Include="ProductTableLoadder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductTableLoadder.Designer.cs">
+      <DependentUpon>ProductTableLoadder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveStatementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveStatementForm.Designer.cs">
+      <DependentUpon>SaveStatementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopMaterialsRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopMaterialsRemove.Designer.cs">
+      <DependentUpon>ShopMaterialsRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsRemove.Designer.cs">
+      <DependentUpon>RawMaterialsRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMatFormStep1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMatFormStep1.Designer.cs">
+      <DependentUpon>RawMatFormStep1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaledShopMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaledShopMaterials.Designer.cs">
+      <DependentUpon>SaledShopMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidueShopMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidueShopMaterials.Designer.cs">
+      <DependentUpon>ResidueShopMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResidueRawMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResidueRawMaterials.Designer.cs">
+      <DependentUpon>ResidueRawMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemovedRawMaterialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemovedRawMaterialsForm.Designer.cs">
+      <DependentUpon>RemovedRawMaterialsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMatFormStep2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMatFormStep2.Designer.cs">
+      <DependentUpon>RawMatFormStep2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecieverList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecieverList.Designer.cs">
+      <DependentUpon>RecieverList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopMaterials.Designer.cs">
+      <DependentUpon>ShopMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopMaterialsStep1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopMaterialsStep1.Designer.cs">
+      <DependentUpon>ShopMaterialsStep1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopMaterialsStep2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopMaterialsStep2.Designer.cs">
+      <DependentUpon>ShopMaterialsStep2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatesEditor.Designer.cs">
+      <DependentUpon>StatesEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StorageViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StorageViewer.Designer.cs">
+      <DependentUpon>StorageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableViewer.Designer.cs">
+      <DependentUpon>TableViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecordsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordsManager.Designer.cs">
+      <DependentUpon>UpdateRecordsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VellaMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VellaMain.Designer.cs">
+      <DependentUpon>VellaMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HumanEditorStep3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HumanEditorStep3.Designer.cs">
+      <DependentUpon>HumanEditorStep3.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BasarAndProdovecForm.resx">
+      <DependentUpon>BasarAndProdovecForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block.resx">
+      <DependentUpon>Block.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashFormViewer.resx">
+      <DependentUpon>CashFormViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralDataList.resx">
+      <DependentUpon>GeneralDataList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopMaterialsNamesList.resx">
+      <DependentUpon>ShopMaterialsNamesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CounterpartyAccountList.resx">
+      <DependentUpon>CounterpartyAccountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseRecordsConfiguration.resx">
+      <DependentUpon>DatabaseRecordsConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CounterpartyAccount.resx">
+      <DependentUpon>CounterpartyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataPicker.resx">
+      <DependentUpon>DataPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductConculationStep1.resx">
+      <DependentUpon>ProductConculationStep1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphGenerator.resx">
+      <DependentUpon>GraphGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanEditorStep2.resx">
+      <DependentUpon>HumanEditorStep2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanEditorStep1.resx">
+      <DependentUpon>HumanEditorStep1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductConculationStep2.resx">
+      <DependentUpon>ProductConculationStep2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductListAdder.resx">
+      <DependentUpon>ProductListAdder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RawMaterials.resx">
+      <DependentUpon>RawMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductTableLoadder.resx">
+      <DependentUpon>ProductTableLoadder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveStatementForm.resx">
+      <DependentUpon>SaveStatementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopMaterialsRemove.resx">
+      <DependentUpon>ShopMaterialsRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsRemove.resx">
+      <DependentUpon>RawMaterialsRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMatFormStep1.resx">
+      <DependentUpon>RawMatFormStep1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaledShopMaterials.resx">
+      <DependentUpon>SaledShopMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidueShopMaterials.resx">
+      <DependentUpon>ResidueShopMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResidueRawMaterials.resx">
+      <DependentUpon>ResidueRawMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemovedRawMaterialsForm.resx">
+      <DependentUpon>RemovedRawMaterialsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMatFormStep2.resx">
+      <DependentUpon>RawMatFormStep2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecieverList.resx">
+      <DependentUpon>RecieverList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopMaterials.resx">
+      <DependentUpon>ShopMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopMaterialsStep1.resx">
+      <DependentUpon>ShopMaterialsStep1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopMaterialsStep2.resx">
+      <DependentUpon>ShopMaterialsStep2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatesEditor.resx">
+      <DependentUpon>StatesEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StorageViewer.resx">
+      <DependentUpon>StorageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableViewer.resx">
+      <DependentUpon>TableViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordsManager.resx">
+      <DependentUpon>UpdateRecordsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VellaMain.resx">
+      <DependentUpon>VellaMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanEditorStep3.resx">
+      <DependentUpon>HumanEditorStep3.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MineDataDataSet.xsc">
+      <DependentUpon>MineDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MineDataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MineDataDataSet.xss">
+      <DependentUpon>MineDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet1.xsc">
+      <DependentUpon>MineDataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MineDataDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MineDataDataSet1.xss">
+      <DependentUpon>MineDataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet2.xsc">
+      <DependentUpon>MineDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MineDataDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MineDataDataSet2.xss">
+      <DependentUpon>MineDataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet3.xsc">
+      <DependentUpon>MineDataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MineDataDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MineDataDataSet3.xss">
+      <DependentUpon>MineDataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet4.xsc">
+      <DependentUpon>MineDataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MineDataDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MineDataDataSet4.xss">
+      <DependentUpon>MineDataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet5.xsc">
+      <DependentUpon>MineDataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MineDataDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MineDataDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MineDataDataSet5.xss">
+      <DependentUpon>MineDataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Vella Splash Screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\BLOCK.png" />
+    <Content Include="MineData.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MineData_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>MineData.mdf</DependentUpon>
+    </Content>
+    <Content Include="vellaico.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
